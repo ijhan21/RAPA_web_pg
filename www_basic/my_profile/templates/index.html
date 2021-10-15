@@ -5,7 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Im Jonghan's Profile</title>
-    <link rel="stylesheet" href="./css/style.css">
+    <!-- <link rel="stylesheet" href="./css/style.css"> -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
 </head>
 <body>
     
@@ -14,15 +15,16 @@
         <h1><a href="#now">현재</a></h1>
         <h1><a href="#tomorrow"> 미래</a></h1>
     </div>
-    <td><img width=300px src="./images/photo.jpg" alt="">임종한</td>
+    <!-- <td><img width=300px src="{{ url_for('static', filename='images/')}}photo.jpg" alt="">임종한</td> -->
+    <td><img width=300px src="{{ url_for('static', filename='images/photo.jpg')}}" alt="">임종한</td>
     <!-- 과거 -->
     <h2  id="past">과거</h2>
     <table>
         <tr>
     <th>사진</th>            
-    <td><img src="./images/project.png" alt=""></td>
-        <td><img src="./images/od_project.png" alt=""></td>
-        <td><img src="./images/robot_hand.png" alt=""></td>
+    <td><img src="{{ url_for('static', filename='images/project.png')}}" alt=""></td>
+        <td><img src="{{ url_for('static', filename='images/od_project.png')}}" alt=""></td>
+        <td><img src="{{ url_for('static', filename='images/robot_hand.png')}}" alt=""></td>
     </tr>
     <tr>
         <th>내용</th>
@@ -37,9 +39,9 @@
     <table>
         <tr>
     <th>사진</th>            
-    <td><img src="./images/exam.png" alt=""></td>
-        <td><img src="./images/nation_project.png" alt=""></td>
-        <td><img src="./images/rapa.png" alt=""></td>
+    <td><img src="{{ url_for('static', filename='images/exam.png')}}" alt=""></td>
+        <td><img src="{{ url_for('static', filename='images/nation_project.png')}}" alt=""></td>
+        <td><img src="{{ url_for('static', filename='images/rapa.png')}}" alt=""></td>
     </tr>
     <tr>
         <th>내용</th>
@@ -54,9 +56,9 @@
     <table>
         <tr>
     <th>사진</th>            
-    <td><img src="./images/try_robot_driving.jpg" alt=""></td>
-        <td><img src="./images/try_robot_hand.jpg" alt=""></td>
-        <td><img src="./images/try.png" alt=""></td>
+    <td><img src="{{ url_for('static', filename='images/try_robot_driving.jpg')}}" alt=""></td>
+        <td><img src="{{ url_for('static', filename='images/try_robot_hand.jpg')}}" alt=""></td>
+        <td><img src="{{ url_for('static', filename='images/try.png')}}" alt=""></td>
     </tr>
     <tr>
         <th>내용</th>
