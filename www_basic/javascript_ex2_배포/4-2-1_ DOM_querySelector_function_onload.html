@@ -5,7 +5,7 @@
     <script>
      // tag에서 onload로 function call 
       function myFunction(){
-        const $header = document.querySelector('h1')
+        const $header = document.querySelector('h1.test')
 
         // 텍스트와 스타일을 변경함
         $header.textContent = 'HEADERS'
@@ -17,7 +17,7 @@
   </head>
   <body onload="myFunction()">
     <h1></h1>
-    <h1></h1>
+    <h1 class="test">test</h1>
     <h1></h1>
     <h1></h1>
 

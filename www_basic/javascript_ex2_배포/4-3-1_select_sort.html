@@ -17,6 +17,7 @@
     <div>
       <input name="str" type="text" size="50" />
       <input type="button" value="정렬하기" onClick="doSort()" />
+      <input type="button" value="초기화" onClick="init()"/>
     </div>
   </form>
   <form name="outputForm">
@@ -28,8 +29,17 @@
     </div>
   </form>
   <script>
-    function doSort() {
+    function init() {
       let $input = document.forms.inputForm
+      let $output = document.forms.outputForm
+      $input.str.value = ''
+      $output.result.value  =''
+    }
+    function doSort() {
+      let $input = document.forms.inputForm //document : 문서 전체
+      // js 에서는 $와 _ 를 변수에 쓸수 있다
+      // 보통 element를 식별하기 위해서 변수 앞에 쓴다.
+
       let $output = document.forms.outputForm
       let ary = $input.str.value.split(",")
       ary = ary.map(function (e) {

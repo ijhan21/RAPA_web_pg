@@ -1,5 +1,5 @@
 const todos = ['출근', '고객미팅', 'js수강', '탁구']
-for (const i in todos){
+for (let i in todos){
 console.log(`${i}번째 할일 : ${todos[todos.length-1-i]}`)
 }
 
@@ -16,4 +16,4 @@ let output = 0
 for (let i=1; i<=100; i++){
     output +=i
 }
-console.log(`${i}번째 할일`)
+// console.log(`${i}번째 할일`)
