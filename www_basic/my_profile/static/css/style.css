@@ -3,18 +3,18 @@ body{
     background-color: slategray;
     margin: 0 auto;
 }
-div{
+#top{
     display: flex;
 }
 h1{
     width: 40%;
     margin: 0 auto;
-    background-color: tomato;
+    background-color:cornflowerblue;
     text-align: center
 }
 table img{
     width: 400px;
-    height: 300px;
+    height: 400px;
 }
 table{border: 3px;
     border-color: whitesmoke;

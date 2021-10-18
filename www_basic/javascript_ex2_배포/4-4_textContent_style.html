@@ -5,19 +5,19 @@
     <script>
       document.addEventListener('DOMContentLoaded', () => {
         //[문제1]. document에서 id인 a와 b를 조작하기 위해 객체 생성
-        
+        const a = document.querySelector('#a')
+        const b = document.querySelector('#b')
 
         
         // 문서객체.textContent : 입력된 문자열을 그대로 넣음, innerText 구버전에서 사용
-        // 문서객체.innerHTML : 입력된 문자열을 HTML형식으로 넣음.
-        a.textContent = '<h1>textContent 속성</h1>'
-        b.innerHTML = '<h1>innerHTML 속성</h1>'
+        // 문서객체.innerHTML : 입력된 문자열을 HTML형식으로 넣음.        
 
         //문서객체.setAttribute(속성 이름, 값) : 특성 속성에 값을 지정함
         //문서객체.getAttribute(속성 이름) : 특정 속성을 추출함
-        
+        a.textContent = '<h1>textContent 속성</h1>'
+        b.innerHTML = '<h1>innerHTML 속성</h1>'
         //[문제2]. document에서 .rect 클래스 모두 query 하기
-        
+        const rects = document.querySelectorAll('.rect')
 
         rects.forEach((rect, index) => {
           const width = (index + 1) * 100
@@ -32,7 +32,7 @@
           console.log(div, index)
           const val = index * 5
           div.style.height = `10px`  //단위 꼭 붙이기
-          div.style.backgroundColor = `rgba(${val+100}, ${val}, ${val})` 
+          div.style.backgroundColor = `rgba(${val+100}, ${val+100}, ${val},0.8)` //투명도까지 할때는 rgba, 색깔만 하면 rgb // a값은 0<a<1인 값
         })
       })
     </script>
