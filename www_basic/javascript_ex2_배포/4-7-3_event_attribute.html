@@ -12,12 +12,13 @@
           output += `shift: ${event.shiftKey}<br>`
           output += `code: ${typeof(event.code) !== 'undefined' ? 
             event.code : event.keyCode}<br>`
-        $h1.innerHTML = output
-       
+        $h1.innerHTML = output       
         }
         //[문제] 키보드의 어떤 키에 대한 이벤트를 받아서 콜벡함수 print 실행
             // 키가 눌릴 때 출력
             // 키가 떨어질 때 출력
+            document.addEventListener('keydown', print)
+            document.addEventListener('keyup', print)
       })
     </script>
   </head>
