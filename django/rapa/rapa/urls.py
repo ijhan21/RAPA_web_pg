@@ -18,6 +18,7 @@ from django.urls import path, include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('', include('gogo.urls')),
     # add app
     path(r'gogo/', include('gogo.urls')),    
     path(r'polls/', include('polls.urls')),    
