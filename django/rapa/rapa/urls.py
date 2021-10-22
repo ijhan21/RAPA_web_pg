@@ -23,4 +23,5 @@ urlpatterns = [
     # add app
     path(r'gogo/', include('gogo.urls')),    
     path(r'polls/', include('polls.urls')),    
+    path(r'new/', include('new.urls')),    
 ]

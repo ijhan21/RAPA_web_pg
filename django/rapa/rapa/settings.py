@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'polls.apps.PollsConfig', # add polls app   
     'gogo.apps.GogoConfig', # add polls app   
+    'new.apps.NewConfig', # add polls app   
 ]
 
 MIDDLEWARE = [
