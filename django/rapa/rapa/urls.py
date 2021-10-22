@@ -15,10 +15,11 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+from rapa import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include('gogo.urls')),
+    path('',views.HomeView.as_view(), name='home'),
     # add app
     path(r'gogo/', include('gogo.urls')),    
     path(r'polls/', include('polls.urls')),    
